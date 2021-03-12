@@ -8,7 +8,7 @@ namespace LoveLetter
         private List<Player> _players = new List<Player>();
         private Card[] _cards = new Card[16];
 
-        public void CreateDeck()
+        public Game()
         {
             for (int i = 0; i < 5; i++)
             {
@@ -36,7 +36,7 @@ namespace LoveLetter
 
             for (int i = 11; i < 13; i++)
             {
-                Card prince = new Priest();
+                Card prince = new Prince();
                 _cards[i] = prince;
             }
             
@@ -46,6 +46,11 @@ namespace LoveLetter
             _cards[13] = king;
             _cards[14] = countess;
             _cards[15] = princess;
+        }
+
+        public Card[] Cards
+        {
+            get { return _cards; }
         }
 
         public void AddPlayer(Player pPlayer)

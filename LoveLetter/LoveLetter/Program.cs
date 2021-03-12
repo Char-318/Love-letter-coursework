@@ -5,12 +5,13 @@ namespace LoveLetter
     class Program
     {
         public static Game game = new Game();
-
+        
         static void Main(string[] args)
         {
-            game.CreateDeck();
-
+            DrawPile drawPile = new DrawPile();
+            drawPile.Shuffle();
             int numOfPlayers = AskForPlayers();
+            
             for (int i = 0; i < numOfPlayers; i++)
             {
                 AskForName(i);

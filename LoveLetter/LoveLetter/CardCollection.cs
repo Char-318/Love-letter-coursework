@@ -5,6 +5,6 @@ namespace LoveLetter
 {
     public class CardCollection
     {
-        private Stack<Card> _cards = new Stack<Card>();
+        protected List<Card> _cards = new List<Card>();
     }
 }
