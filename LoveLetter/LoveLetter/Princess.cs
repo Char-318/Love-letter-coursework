@@ -2,12 +2,11 @@ namespace LoveLetter
 {
     public class Princess : Card
     {
-        public Princess(string pName, string pDescription, int pScore, int pAmount) : base(pName, pDescription, pScore, pAmount)
+        public Princess() : base()
         {
-            pName = "Princess";
-            pDescription = "If you discard this card, you are out of the round.";
-            pScore = 8;
-            pAmount = 1;
+            _name = "Princess";
+            _description = "If you discard this card, you are out of the round.";
+            _score = 8;
         }
     }
 }

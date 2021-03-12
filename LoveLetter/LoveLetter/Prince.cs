@@ -4,12 +4,11 @@ namespace LoveLetter
     {
         private Player _player;
         
-        public Prince(string pName, string pDescription, int pScore, int pAmount) : base(pName, pDescription, pScore, pAmount)
+        public Prince() : base()
         {
-            pName = "Prince";
-            pDescription = "Choose any player (including yourself) to discard their hand and draw a new card.";
-            pScore = 5;
-            pAmount = 2;
+            _name = "Prince";
+            _description = "Choose any player (including yourself) to discard their hand and draw a new card.";
+            _score = 5;
         }
     }
 }

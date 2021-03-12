@@ -4,12 +4,11 @@ namespace LoveLetter
     {
         private Player _player;
         
-        public Priest(string pName, string pDescription, int pScore, int pAmount) : base(pName, pDescription, pScore, pAmount)
+        public Priest() : base()
         {
-            pName = "Priest";
-            pDescription = "Look at another player's hand.";
-            pScore = 2;
-            pAmount = 2;
+            _name = "Priest";
+            _description = "Look at another player's hand.";
+            _score = 2;
         }
     }
 }

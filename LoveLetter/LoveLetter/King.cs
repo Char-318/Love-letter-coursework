@@ -4,12 +4,11 @@ namespace LoveLetter
     {
         private Player _player;
         
-        public King(string pName, string pDescription, int pScore, int pAmount) : base(pName, pDescription, pScore, pAmount)
+        public King() : base()
         {
-            pName = "King";
-            pDescription = "Trade hands with another player of your choice.";
-            pScore = 6;
-            pAmount = 1;
+            _name = "King";
+            _description = "Trade hands with another player of your choice.";
+            _score = 6;
         }
     }
 }

@@ -6,13 +6,12 @@ namespace LoveLetter
     {
         private Player _player;
 
-        public Baron(string pName, string pDescription, int pScore, int pAmount) : base(pName, pDescription, pScore, pAmount)
+        public Baron() : base()
         {
-            pName = "Baron";
-            pDescription = 
+            _name = "Baron";
+            _description = 
                 "You and another player secretly compare hands. The player with the lower value is out of the round.";
-            pScore = 3;
-            pAmount = 2;
+            _score = 3;
         }
     }
 }
