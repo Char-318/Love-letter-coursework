@@ -21,5 +21,12 @@ namespace LoveLetter
                 _cards.Add(randCard);
             }
         }
+
+        public void DrawCard(Player pPlayer)
+        {
+            Card card = _cards.ElementAt(0);
+            _cards.RemoveAt(0);
+            pPlayer._hand.Add(card);
+        }
     }
 }

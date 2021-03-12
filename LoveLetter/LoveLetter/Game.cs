@@ -53,6 +53,11 @@ namespace LoveLetter
             get { return _cards; }
         }
 
+        public List<Player> Players
+        {
+            get { return _players; }
+        }
+
         public void AddPlayer(Player pPlayer)
         {
             _players.Add(pPlayer);

@@ -5,6 +5,6 @@ namespace LoveLetter
 {
     public class CardCollection
     {
-        protected List<Card> _cards = new List<Card>();
+        public List<Card> _cards = new List<Card>();
     }
 }

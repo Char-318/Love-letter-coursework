@@ -5,7 +5,7 @@ namespace LoveLetter
     public class Player
     {
         private string _name;
-        private List<Card> _hand = new List<Card>();
+        public List<Card> _hand = new List<Card>();
         private int _tokens;
         private bool _isOut;
         private bool _isProtected;

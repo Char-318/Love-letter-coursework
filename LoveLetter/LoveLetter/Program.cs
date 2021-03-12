@@ -5,11 +5,10 @@ namespace LoveLetter
     class Program
     {
         public static Game game = new Game();
+        public static Round round = new Round();
         
         static void Main(string[] args)
         {
-            DrawPile drawPile = new DrawPile();
-            drawPile.Shuffle();
             int numOfPlayers = AskForPlayers();
             
             for (int i = 0; i < numOfPlayers; i++)
