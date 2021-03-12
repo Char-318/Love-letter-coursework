@@ -7,15 +7,25 @@ namespace LoveLetter
     {
         private int _numOfPlayers;
         private Card _hiddenCard;
+        
+        public DrawPile drawPile = new DrawPile();
 
         public Round()
         {
-            DrawPile drawPile = new DrawPile();
             drawPile.Shuffle();
             _hiddenCard = drawPile._cards.ElementAt(0);
             drawPile._cards.RemoveAt(0);
+        }
 
+        public void StartRound()
+        {
             _numOfPlayers = Program.game.Players.Count;
+            
+            foreach (Player player in Program.game.Players)
+            {
+                drawPile.DrawCard(player);
+                Console.WriteLine("{0} has the {1}", player.Name, player.Hand.ElementAt(0).Name);
+            }
         }
     }
 }

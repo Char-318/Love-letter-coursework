@@ -15,6 +15,8 @@ namespace LoveLetter
             {
                 AskForName(i);
             }
+            
+            round.StartRound();
         }
 
         private static int AskForPlayers()

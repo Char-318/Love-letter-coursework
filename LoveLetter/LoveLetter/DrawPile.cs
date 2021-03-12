@@ -6,8 +6,6 @@ namespace LoveLetter
 {
     public class DrawPile : CardCollection
     {
-        private Card _card;
-        
         public void Shuffle()
         {
             List<Card> allCards = Program.game.Cards.ToList();
@@ -26,7 +24,7 @@ namespace LoveLetter
         {
             Card card = _cards.ElementAt(0);
             _cards.RemoveAt(0);
-            pPlayer._hand.Add(card);
+            pPlayer.AddToHand(card);
         }
     }
 }
