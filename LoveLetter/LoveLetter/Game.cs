@@ -1,9 +1,11 @@
+using System.Collections.Generic;
+
 namespace LoveLetter
 {
     public class Game
     {
         private Player _winner;
-        private Player[] _players;
+        private List<Player> _players = new List<Player>();
         private Card[] _cards = new Card[16];
 
         public void CreateDeck()
@@ -44,6 +46,11 @@ namespace LoveLetter
             _cards[13] = king;
             _cards[14] = countess;
             _cards[15] = princess;
+        }
+
+        public void AddPlayer(Player pPlayer)
+        {
+            _players.Add(pPlayer);
         }
     }
 }

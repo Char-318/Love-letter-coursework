@@ -10,5 +10,10 @@ namespace LoveLetter
         private bool _isOut;
         private bool _isProtected;
         private int _totalCards;
+
+        public Player(string pName)
+        {
+            _name = pName;
+        }
     }
 }
