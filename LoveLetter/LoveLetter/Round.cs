@@ -11,6 +11,7 @@ namespace LoveLetter
         private Queue<Player> _playersQueue = new Queue<Player>();
         
         public DrawPile drawPile = new DrawPile();
+        public DiscardPile discardPile = new DiscardPile();
 
         public Round()
         {
@@ -41,7 +42,9 @@ namespace LoveLetter
                 {
                     Console.Write(card.Name + " ");
                 }
-                Console.WriteLine();R
+                Console.WriteLine();
+                
+                AskToDiscard(currentPlayer);
 
                 _playersQueue.Enqueue(currentPlayer);
             } while (_playersQueue.Count != 1 && drawPile._cards.Count != 0);
@@ -64,7 +67,32 @@ namespace LoveLetter
                     _playersQueue.Enqueue(Program.game.Players.ElementAt(i));
                 }
             }
+        }
 
+        public void AskToDiscard(Player pCurrentPlayer)
+        {
+            Console.WriteLine("Which card would you like to discard?");
+            string input = Console.ReadLine();
+            bool validInput = false;
+            int chosenCard = 0;
+                
+            for (int i = 0; i < pCurrentPlayer.Hand.Count; i++)
+            {
+                if (pCurrentPlayer.Hand[i].Name.ToUpper() == input.ToUpper())
+                {
+                    validInput = true;
+                    chosenCard = i;
+                    break;
+                }
+            }
+
+            if (validInput == false)
+            {
+                Console.WriteLine("Please enter a valid card name.");
+                AskToDiscard(pCurrentPlayer);
+            }
+            
+            discardPile.DiscardCard(pCurrentPlayer, chosenCard);
         }
     }
 }

@@ -9,7 +9,7 @@ namespace LoveLetter
         private int _tokens;
         private bool _isOut;
         private bool _isProtected;
-        private int _totalCards;
+        private int _totalCards = 0;
 
         public Player(string pName)
         {
@@ -29,6 +29,11 @@ namespace LoveLetter
         public void AddToHand(Card pCard)
         {
             _hand.Add(pCard);
+        }
+
+        public void AddToTotal(Card pCard)
+        {
+            _totalCards += pCard.Score;
         }
     }
 }

@@ -10,5 +10,10 @@ namespace LoveLetter
         {
             get { return _name; }
         }
+
+        public int Score
+        {
+            get { return _score; }
+        }
     }
 }
