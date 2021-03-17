@@ -26,6 +26,11 @@ namespace LoveLetter
                 drawPile.DrawCard(player);
                 Console.WriteLine("{0} has the {1}", player.Name, player.Hand.ElementAt(0).Name);
             }
+            
+            Random rand = new Random();
+            int randNum = rand.Next(0, _numOfPlayers);
+            Player firstPlayer = Program.game.Players.ElementAt(randNum);
+            Console.WriteLine(firstPlayer.Name + " is going first.");
         }
     }
 }
