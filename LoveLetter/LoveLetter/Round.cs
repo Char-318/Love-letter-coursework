@@ -26,10 +26,25 @@ namespace LoveLetter
             foreach (Player player in Program.game.Players)
             {
                 drawPile.DrawCard(player);
-                Console.WriteLine("{0} has the {1}", player.Name, player.Hand.ElementAt(0).Name);
             }
             
             CreateQueue();
+
+            do
+            {
+                Player currentPlayer = _playersQueue.Dequeue();
+                Console.WriteLine(currentPlayer.Name + "'s turn:");
+                drawPile.DrawCard(currentPlayer);
+                //Console.WriteLine("Hand: {0}, {1}", currentPlayer.Hand.ElementAt(0).Name, currentPlayer.Hand.ElementAt(1).Name);
+                Console.Write("Hand: ");
+                foreach (Card card in currentPlayer.Hand)
+                {
+                    Console.Write(card.Name + " ");
+                }
+                Console.WriteLine();R
+
+                _playersQueue.Enqueue(currentPlayer);
+            } while (_playersQueue.Count != 1 && drawPile._cards.Count != 0);
         }
 
         public void CreateQueue()
