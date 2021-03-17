@@ -8,7 +8,7 @@ namespace LoveLetter
     {
         public void Shuffle()
         {
-            List<Card> allCards = Program.game.Cards.ToList();
+            List<Card> allCards = _allCards.ToList();
             Random rand = new Random();
 
             for (int i = 15; i >= 0; i--)
